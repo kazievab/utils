@@ -8,6 +8,7 @@ class CollectionSyntaxSpec extends AnyWordSpec with CollectionSyntax {
   "CollectionHelper#intersectBy" should {
     "return correct value" in {
       assert(commons.intersectBy(_.number)(List()) === List())
+      assert(commons.intersectBy(_.number)(List()) === List())
       assert(commons.intersectBy(_.number)(List(1, 2)) === List(test1, test2))
       assert(commons.intersectBy(_.number)(List(3, 4)) === List(test3, test4))
     }
