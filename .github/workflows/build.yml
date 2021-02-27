@@ -39,4 +39,7 @@ jobs:
     - name: Test
       run: sbt ++${{ matrix.scala }} clean coverage test coverageReport "scalafixAll --check"
 
-    - uses: codecov/codecov-action@v1
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        fail_ci_if_error: true
